@@ -1,0 +1,80 @@
+.profile-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.profile-container {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h1 {
+  font-family: 'IntegralCF', sans-serif;
+  font-size: 2rem;
+  color: #1E1E1E;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #E8ECEF;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.info-group {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.info-group label {
+  font-weight: 500;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.info-group p {
+  font-size: 1rem;
+  color: #1E1E1E;
+  padding: 0.75rem;
+  background: #F6F6F6;
+  border-radius: 4px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Make certain fields span full width */
+.info-group:nth-child(4),
+.info-group:nth-child(5),
+.info-group:nth-child(6),
+.info-group:nth-child(9) {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 1rem;
+  }
+  
+  .profile-container {
+    padding: 1.5rem;
+  }
+  
+  .profile-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-info {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .info-group:nth-child(n) {
+    grid-column: auto;
+  }
+} 
